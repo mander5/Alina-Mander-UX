@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './HomePage.css';
+import profile from '../../Assets/profile.jpg';
 
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -12,7 +13,7 @@ const HomePage = () => {
     <div className='home-page'>
       <div className={`content ${isVisible ? 'homepage-content-fade-in' : ''}`}>
         <div className='image'>
-          <img src='src/Assets/profile.jpg' alt='Alina' />
+          <img src={profile} alt='Alina' />
         </div>
         <div className='text'>
           <h1>Hello,</h1>

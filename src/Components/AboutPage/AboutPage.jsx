@@ -1,5 +1,6 @@
 import React from 'react';
 import './AboutPage.css';
+import aboutImage from '../../Assets/about.jpg';
 
 const AboutPage = () => {
   return (
@@ -7,7 +8,7 @@ const AboutPage = () => {
       <div className='content'>
         <div className='about-image'>
           <h1 className='about-title'>About Me</h1>
-          <img src='src\Assets\about.jpg' alt='About Me' />
+          <img src={aboutImage} alt='About Me' />
         </div>
         <div className='text'>
           <p>Hi there, nice to meet you!</p>

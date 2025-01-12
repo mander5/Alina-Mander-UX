@@ -1,4 +1,7 @@
 import './UxPage.css';
+import ux1 from '../../Assets/ux1.jpg';
+import ux2 from '../../Assets/ux2.jpg';
+import ux3 from '../../Assets/ux3.jpg';
 
 const UxPage = () => {
   return (
@@ -35,7 +38,7 @@ const UxPage = () => {
           </div>
         </div>
         <div>
-          <img src='src/Assets/ux1.jpg' alt='ux1' />
+          <img src={ux1} alt='ux1' />
         </div>
       </div>
       <div className='ux-page'>
@@ -60,7 +63,7 @@ const UxPage = () => {
           </div>
         </div>
         <div>
-          <img src='src/Assets/ux2.jpg' alt='ux1' />
+          <img src={ux2} alt='ux1' />
         </div>
       </div>
       <div className='ux-page ux-page-alternate'>
@@ -86,7 +89,7 @@ const UxPage = () => {
           </div>
         </div>
         <div>
-          <img src='src/Assets/ux3.jpg' alt='ux1' />
+          <img src={ux3} alt='ux1' />
         </div>
       </div>
     </>
