@@ -1,0 +1,7 @@
+# Ensure all text files use LF line endings in the repository
+* text=auto
+
+# Override for specific file types
+*.bat text eol=crlf
+*.sh text eol=lf
+*.txt text eol=lf

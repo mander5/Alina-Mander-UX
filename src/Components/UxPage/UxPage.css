@@ -1,0 +1,54 @@
+.ux-page {
+  display: flex; /* Enable flexbox layout */
+  justify-content: space-between; /* Space between the content and the image */
+  align-items: flex-start; /* Align items at the top */
+  padding: 40px;
+  background-color: #f4f4f4;
+  gap: 20px; /* Add space between child elements */
+}
+
+.ux-content-1 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.ux-page-alternate {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  z-index: 0;
+}
+
+.ux-content-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  text-align: left;
+  flex: 1; /* Allow it to take up available space */
+}
+
+.ux-page-alternate::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0; /* Extend to the right edge */
+  bottom: 0;
+  background-color: white; /* Same background color */
+  z-index: -1; /* Place it behind the content */
+  width: 100vw;
+}
+
+.ux-page img {
+  max-width: 300px; /* Limit the image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  object-fit: contain; /* Ensure the image is scaled properly */
+}
+
+@media (min-width: 768px) {
+  .ux-page img {
+    max-width: 500px;
+  }
+}

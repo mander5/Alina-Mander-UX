@@ -1,0 +1,177 @@
+/* Home Page Styling */
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack content vertically */
+  padding: 40px;
+  margin-top: 40px;
+  background-color: #f4f4f4;
+  font-family: 'Raleway', sans-serif;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%; /* Expand to take up more space */
+  max-width: 1400px; /* Increase max width for larger screens */
+}
+
+.text {
+  flex: 1.5; /* Adjust flex to take more space */
+  padding-left: 40px; /* Increase padding */
+}
+
+.text h1 {
+  font-size: 4em; /* Scale font size for larger screens */
+  line-height: 1.1;
+  color: black;
+}
+
+.text h2 {
+  margin-top: 2%;
+  font-size: 2em;
+  color: black;
+}
+
+.text p {
+  font-size: 20px; /* Slightly increase font size */
+  color: #555;
+  line-height: 1.8;
+  margin-top: 20px;
+}
+
+.image {
+  flex: 1; /* Keep proportional scaling */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.image img {
+  width: 350px; /* Increase image size */
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Call to Action Section Styling */
+.cta {
+  display: flex;
+  justify-content: flex-start; /* Align the CTA balls to the left */
+  align-items: center;
+  margin-top: 40px; /* Adds space above the CTA */
+  width: 100%; /* Ensures the CTA balls are aligned with the text */
+  flex-wrap: nowrap;
+}
+
+.cta-ball {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px; /* Increase size */
+  height: 120px;
+  border-radius: 50%;
+  color: black; /* Set text color inside balls to black */
+  font-weight: bold;
+  font-size: 15px; /* Adjust font size */
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-right: 20px; /* Adds space between balls */
+}
+
+.cta-ball span {
+  text-align: center;
+}
+
+/* Specific Colors for Each Ball */
+.cta-cv {
+  background-color: rgb(238, 94, 96);
+}
+
+.cta-youtube {
+  background-color: rgb(118, 206, 181);
+}
+
+.cta-ux {
+  background-color: rgb(243, 235, 194);
+}
+
+/* Hover Effect */
+.cta-ball:hover {
+  transform: scale(1.1); /* Enlarges the balls when hovered */
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1600px) {
+  .content {
+    width: 800%; /* Take up more space on larger screens */
+  }
+
+  .text h1 {
+    font-size: 5em; /* Further scale font size */
+  }
+
+  .image img {
+    width: 400px; /* Enlarge image for larger screens */
+    height: 400px;
+  }
+
+  .cta-ball {
+    width: 140px; /* Further increase size */
+    height: 140px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image {
+    order: 2; /* Position image below text */
+    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .text {
+    order: 1; /* Position text above image */
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .cta {
+    display: flex; /* Ensure horizontal alignment */
+    justify-content: center; /* Center-align the CTA balls */
+    align-items: center; /* Vertically center the balls */
+    flex-wrap: nowrap; /* Prevent balls from stacking */
+    gap: 10px; /* Even spacing between balls */
+    width: 100%; /* Ensure the CTA section spans full width */
+    margin-top: 20px;
+    flex-direction: row;
+  }
+
+  .cta-ball {
+    flex-shrink: 0; /* Prevent balls from shrinking */
+    margin-right: 0; /* Reset margin-right if previously applied */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.homepage-content-fade-in {
+  opacity: 0; /* Start hidden */
+  animation: fadeInUp 1s ease-out forwards; /* Apply fade-in animation */
+}

@@ -1,0 +1,46 @@
+/* src/components/Footer/Footer.css */
+.footer {
+  background-color: rgb(243, 243, 243); /* Same background as body */
+  padding: 20px 0;
+  padding-left: 13%;
+  text-align: left;
+  display: flex; /* Ensures footer uses flexbox */
+  flex-direction: row; /* Explicitly sets the layout to horizontal */
+  justify-content: flex-start; /* Aligns links to the left */
+  align-items: center; /* Vertically aligns the items */
+  gap: 8px; /* Reduced space between the logos (from 10px to 8px) */
+  width: 100%; /* Ensures the footer spans the full width */
+  position: static; /* Fixes the footer at the bottom */
+  bottom: 0; /* Aligns the footer to the bottom */
+  left: 0; /* Aligns the footer to the left */
+  z-index: 10; /* Ensures it stays on top of other content */
+}
+
+.footer-link {
+  color: rgb(149, 149, 149); /* Changed to rgb(149,149,149) */
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none; /* Remove underline from links */
+  display: flex;
+  align-items: center;
+}
+
+/* Ensures no color change on hover */
+.footer-link:hover {
+  color: rgb(149, 149, 149); /* Keeps the same color on hover */
+}
+
+.footer-link svg {
+  margin-right: 8px; /* Reduced space between icon and text */
+  font-size: 30px; /* Increased icon size to 30px */
+}
+
+.footer-link:first-child {
+  margin-left: 10px; /* Adds space to the left of the first logo */
+}
+
+/* Styling for the email link */
+.footer-link.email {
+  font-weight: 100px; /* Thinner font for email */
+  margin-left: 32px; /* Adds extra space between the Instagram logo and email */
+}
