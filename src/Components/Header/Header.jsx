@@ -36,9 +36,6 @@ function Header() {
               <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to='/ux-research'>CV</Link>
-            </li>
-            <li>
               <Link to='/ux-research'>UX Research</Link>
             </li>
             <li>

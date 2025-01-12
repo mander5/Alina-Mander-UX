@@ -3,7 +3,6 @@
   background-color: rgb(243, 243, 243);
   padding: 25px 20px;
   width: 100%;
-  z-index: 10;
 }
 
 .header-container {
@@ -14,7 +13,7 @@
 
 /* Hamburger Button */
 .hamburger {
-  display: none;
+  display: block;
   font-size: 24px;
   background: none;
   border: none;
